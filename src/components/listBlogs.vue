@@ -1,10 +1,9 @@
 <template>
     <div id="show-blogs">
-        <h1>All Blog Articles</h1>
+        <h1>List Blog Titles</h1>
         <input type="text" v-model="search" placeholder="search blogs" />
         <div v-for="blog in filteredBlogs" v-bind:key="blog.id" class="single-blog">
-            <router-link v-bind:to="'/blog/'+blog.id"><h2 v-rainbow>{{ blog.title|to-uppercase}}</h2></router-link>
-            <article>{{ blog.body }}</article>
+            <h2>{{ blog.title }}</h2>
         </div>
     </div>
 </template>
