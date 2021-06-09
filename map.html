@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to get a new array with the full name of each person in the array.</p>
+<button onclick="myFunction()">Try it</button>
+
+<p>New array: <span id="demo"></span></p>
+
+<script>
+var officers = [ { id: 20, name: 'Captain Piett' }, 
+  { id: 24, name: 'General Veers' }, 
+  { id: 56, name: 'Admiral Ozzel' }, 
+  { id: 88, name: 'Commander Jerjerrod' } ];
+
+
+function getId(officers) {
+  return officers.id;
+}
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = officers.map(getId);
+}
+</script>
+
+</body>
+</html>
