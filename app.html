@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>VueJS Tutorials</title>
+        <link href="styles.css" rel="stylesheet" />
+        <script src="https://unpkg.com/vue"></script>
+    </head>
+    <body>
+        <h1>Vue course</h1>
+        <div id="app1">
+          <p>{{ msg }}</p>
+          <h3 V-html="outputGoal()"></h3>
+          <!--<p>{{outputGoal()}}</p>-->
+          <p>learn more<a v-bind:href="vuelink">about vue</a></p>
+          <button v-on:click="Add(2)">Add</button>
+          <button @click="Reduce()">Reduce</button>
+          <p>Result:{{count}}</p>
+          <input type='text' v-on:input="setName($event,'-Vuejs')">
+          <p> Topic Name:{{name}}</p>
+        </div>
+        
+    </body>
+
+    <script src="app.js"></script>
+</html>
