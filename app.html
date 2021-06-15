@@ -13,11 +13,22 @@
           <h3 V-html="outputGoal()"></h3>
           <!--<p>{{outputGoal()}}</p>-->
           <p>learn more<a v-bind:href="vuelink">about vue</a></p>
-          <button v-on:click="Add(2)">Add</button>
-          <button @click="Reduce()">Reduce</button>
+          <button v-on:click="Add(10)">Add</button>
+          <button @click.right="Reduce()">Reduce</button>
+          <p v-once>starting counter:{{count}}</p>
           <p>Result:{{count}}</p>
-          <input type='text' v-on:input="setName($event,'-Vuejs')">
-          <p> Topic Name:{{name}}</p>
+          
+          <input type='text' v-on:input="setName($event,'-Vuejs')" v-on:keyup.enter='confirmInput'>
+          <p> Topic Name:{{confirmedName}}</p>
+          <form v-on:submit.prevent="submitForm">
+              <input type="text">
+              <button>Sign Up</button>
+          </form>
+          <!--<input type='text' v-bind:value='name' v-on:input="setName($event,'-Vuejs')">-->
+          <input type='text' v-model='name'>
+          <input type='text' v-model='lastName'>
+          <button v-on:click="resetInput">Reset</button>
+          <p>your name:{{fullName}}</p>
         </div>
         
     </body>
