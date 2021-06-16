@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>VueJS Tutorials</title>
+        <link href="styles.css" rel="stylesheet" />
+        <script src="https://unpkg.com/vue"></script>
+    </head>
+    <body>
+        <h1>Vue course</h1>
+        <div id="vfor">
+            <ul>
+                <li v-for="(item,i) in items" :key="item">{{item}}{{i}}</li>
+            </ul>
+            <ul>
+                <li v-for="(item,i) in items">{{item}}{{i}}</li>
+            </ul>
+            <button @click="items.push('pizza')">Add New</button>
+            <!-- <template v-for="(item,index) in items">
+                <h1>{{item}}</h1>{{index}}
+            </template> -->
+            <hr>
+            <ul>
+                <li v-for="n in 10">{{n}}</li>
+                <li v-for="person in persons">
+                    <div v-for="(value,key,index) in person">{{key}}: {{value}} ({{index}})</div></li>
+            </ul>
+            </hr>
+       
+        </div>
+        
+    </body>
+
+    <script src="vfor.js"></script>
+</html>

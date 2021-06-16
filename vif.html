@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>VueJS Tutorials</title>
+        <link href="styles.css" rel="stylesheet" />
+        <script src="https://unpkg.com/vue"></script>
+    </head>
+    <body>
+        <h1>Vue course</h1>
+        <div id="vif">
+            <p v-if="show">u can see me!</p><span>Hello!</span>
+            <p v-else>now u can see me!</p>
+            <template v-if="show">
+                <h1>Heading</h1>
+                <p>inside a template</p>
+            </template>
+            <p v-show>do u also see me?</p>
+            <button @click="show=!show">switch</button>
+       
+        </div>
+        
+    </body>
+
+    <script src="vif.js"></script>
+</html>
