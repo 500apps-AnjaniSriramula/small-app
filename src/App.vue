@@ -1,26 +1,43 @@
 <template>
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <app-user></app-user>
+    <div>
+        <form-helper>
+            <div slot="form-header">
+                <h3>MT 500apps</h3>
+                <p>please fill out our form to get notifications.</p>
             </div>
-        </div>
+            <div slot="form-fields">
+                <input type="text" placeholder="name" required />
+                <input type="password" placeholder="password" required />
+            </div>
+            <div slot="form-controls">
+                <button v-on:click="handleSubmit">Submit</button>
+            </div>
+        </form-helper>
     </div>
 </template>
 
 <script>
-    import User from './components/User.vue';
-
-    export default {
-        components: {
-            appUser: User
+// Imports
+import formHelper from './components/formHelper.vue'
+export default {
+    components: {
+        'form-helper': formHelper
+    },
+    data () {
+        return {
+        }
+    },
+    methods: {
+        handleSubmit: function(){
+            alert('thanks for submitting');
         }
     }
+}
 </script>
 
 <style>
-    div.component {
-        border: 1px solid black;
-        padding: 30px;
-    }
+body{
+    margin: 0;
+    font-family: 'Nunito SemiBold';
+}
 </style>
