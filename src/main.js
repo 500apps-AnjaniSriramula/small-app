@@ -1,9 +1,9 @@
 import Vue from 'vue'
-import VueResource from 'vue-resource'
 import App from './App.vue'
 
-// Use vue-resource package
-Vue.use(VueResource);
+Vue.filter('to-lowercase', function(value) {
+    return value.toLowerCase();
+});
 
 new Vue({
   el: '#app',
